@@ -31,12 +31,13 @@
 - GitHub 저장소: `https://github.com/choyj358-ai/daily-interview-kakao-bot.git`
 - 첫 커밋은 `main` 브랜치에 푸시 완료
 - `/health` API가 존재하며 사용자가 브라우저에서 확인함
-- Docker Desktop은 아직 설치 전
-- 집 노트북에 Java 21, Git, Python 설치 확인
+- Docker Desktop 설치 확인
+- Docker Compose로 MySQL 8.4 컨테이너 실행 확인
+- MySQL 프로필로 Spring Boot 테스트 성공
+- 집 노트북에 Java 21, Git, Python, Docker 설치 확인
 
 ## 노션 상위 페이지
 
 `https://www.notion.so/364b7db023de80d99d56e9b22a241b52`
 
 앞으로 계획, 진행 로그, 에러 해결 기록, 코드 정리, 배포 기록은 이 페이지 아래에 하위 페이지로 남긴다.
-
