@@ -35,6 +35,7 @@
 - Docker Compose로 MySQL 8.4 컨테이너 실행 확인
 - MySQL 프로필로 Spring Boot 테스트 성공
 - 집 노트북에 Java 21, Git, Python, Docker 설치 확인
+- 면접 질문 저장 기능 구현 진행 중
 
 ## 노션 상위 페이지
 
