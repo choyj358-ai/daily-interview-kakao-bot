@@ -1,30 +1,30 @@
-# Harness Workflow
+# 하네스 작업 흐름
 
-## Default Flow
+## 기본 흐름
 
-1. Reverse interview
-2. Write or update plan
-3. Implement the smallest next slice
-4. Verify locally
-5. Commit with a clear message
-6. Push to GitHub when the slice is stable
-7. Record progress in Notion
+1. AI 역인터뷰
+2. 계획 문서 작성 또는 업데이트
+3. 가장 작은 기능 단위 구현
+4. 로컬 검증
+5. 커밋
+6. 안정적인 단위는 GitHub에 푸시
+7. 노션에 진행 기록 작성
 
-## Beginner Guidance
+## 초보자 안내 원칙
 
-For every major step, provide:
+큰 작업마다 아래 내용을 함께 알려준다.
 
-- What the step means
-- Which file is being touched
-- Where the file is located
-- What command to run
-- What success looks like
-- What to do if an error appears
+- 이 단계가 무슨 의미인지
+- 어떤 파일을 수정하는지
+- 파일 위치가 어디인지
+- 어떤 명령어를 실행하는지
+- 성공하면 무엇이 보여야 하는지
+- 에러가 나오면 무엇을 확인해야 하는지
 
-## Do Not Rush Into
+## 서두르지 않을 것
 
-- Cloud deployment before local Docker Compose works
-- Kakao channel messages before "send to myself" works
-- Flutter UI before backend automation works
-- Multi-user design before single-user delivery works
+- 로컬 Docker Compose가 되기 전 클라우드 배포로 넘어가지 않는다.
+- 카카오 `나에게 보내기`가 되기 전 카카오 채널 메시지로 넘어가지 않는다.
+- 백엔드 자동화가 되기 전 Flutter 화면을 만들지 않는다.
+- 1인 발송이 되기 전 다중 사용자 구조로 확장하지 않는다.
 

@@ -1,29 +1,29 @@
 ---
 name: notion-progress-logger
-description: Record project progress in Notion. Use when a plan, daily progress, error solution, architecture decision, commit, or deployment result should be saved under the project parent page.
+description: 프로젝트 진행 상황을 노션에 기록할 때 사용한다. 계획, 일일 진행, 에러 해결, 아키텍처 결정, 커밋, 배포 결과를 프로젝트 상위 페이지 아래에 저장할 때 사용한다.
 ---
 
-# Notion Progress Logger
+# 노션 진행 기록
 
-## Parent Page
+## 상위 페이지
 
 `https://www.notion.so/364b7db023de80d99d56e9b22a241b52`
 
-## Record Types
+## 기록 대상
 
-Create child pages for:
+아래 내용은 노션 하위 페이지로 기록한다.
 
-- AI reverse interviews
-- Final or updated plans
-- Daily progress logs
-- Error and solution records
-- GitHub commit/push records
-- Deployment notes
-- Portfolio summary drafts
+- AI 역인터뷰
+- 최종 또는 수정된 계획
+- 일자별 진행 로그
+- 에러와 해결 방법
+- GitHub 커밋/푸시 기록
+- 배포 기록
+- 포트폴리오 설명 초안
 
-## Writing Style
+## 작성 방식
 
-- Write in Korean.
-- Keep logs factual and easy to resume from.
-- Include paths, commands, and next steps when useful.
+- 한국어로 작성한다.
+- 나중에 이어서 작업하기 쉽도록 사실 중심으로 기록한다.
+- 필요하면 경로, 명령어, 다음 단계를 함께 남긴다.
 

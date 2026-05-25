@@ -1,27 +1,27 @@
 ---
 name: project-planner
-description: Plan and update the daily-interview-kakao-bot portfolio project. Use when defining scope, milestones, architecture, commit timing, deployment steps, or beginner-friendly task breakdowns.
+description: daily-interview-kakao-bot 포트폴리오 프로젝트의 범위, 단계, 아키텍처, 커밋 타이밍, 배포 흐름을 계획하거나 업데이트할 때 사용한다.
 ---
 
-# Project Planner
+# 프로젝트 플래너
 
-## Instructions
+## 지침
 
-- Keep the first version focused on daily LLM generation, MySQL storage, and Kakao "send to myself".
-- Convert vague ideas into a small next milestone.
-- Explain tradeoffs in beginner-friendly Korean.
-- Update Notion when the plan changes meaningfully.
-- Prefer a visible sequence: plan, implement, verify, commit, document.
+- 1차 버전은 매일 LLM 질문 생성, MySQL 저장, 카카오 `나에게 보내기` 발송에 집중한다.
+- 모호한 아이디어는 바로 실행 가능한 작은 다음 단계로 바꾼다.
+- 선택지가 있을 때는 초보자가 이해할 수 있게 장단점을 한국어로 설명한다.
+- 계획이 의미 있게 바뀌면 노션에 기록한다.
+- 항상 `계획 → 구현 → 검증 → 커밋 → 기록` 흐름을 따른다.
 
-## Current Milestones
+## 현재 마일스톤
 
-1. Spring Boot project creation
-2. Docker Compose and MySQL
-3. Question persistence
-4. FastAPI LLM generator
-5. Spring Boot to FastAPI integration
-6. Kakao message sending
-7. Daily scheduler
-8. README and portfolio notes
-9. Cloud deployment
+1. Spring Boot 프로젝트 생성
+2. Docker Compose와 MySQL 설정
+3. 면접 질문 저장 기능
+4. FastAPI LLM 생성 서비스
+5. Spring Boot와 FastAPI 연동
+6. 카카오톡 메시지 발송
+7. 매일 오전 9시 스케줄러
+8. README와 포트폴리오 문서
+9. 클라우드 배포
 

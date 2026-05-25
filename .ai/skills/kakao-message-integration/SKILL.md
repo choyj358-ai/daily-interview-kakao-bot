@@ -1,36 +1,36 @@
 ---
 name: kakao-message-integration
-description: Integrate Kakao Message API for this project. Use when handling Kakao Developers setup, OAuth tokens, send-to-myself messages, delivery retries, or delivery result records.
+description: 이 프로젝트에서 Kakao Message API를 연동할 때 사용한다. Kakao Developers 설정, OAuth 토큰, 나에게 보내기, 발송 재시도, 발송 결과 저장을 다룰 때 사용한다.
 ---
 
-# Kakao Message Integration
+# 카카오 메시지 연동
 
-## First-Version Scope
+## 1차 버전 범위
 
-Use Kakao Message API "send to myself".
+카카오 메시지 API의 `나에게 보내기`를 사용한다.
 
-Do not implement:
+아래 기능은 1차 버전에 넣지 않는다.
 
-- Kakao channel message
-- Multi-user delivery
-- User login
+- 카카오 채널 메시지
+- 여러 사용자 발송
+- 사용자 로그인
 
-## Message Content
+## 메시지 내용
 
-The Kakao message should include:
+카카오 메시지에는 아래 내용을 담는다.
 
-- Today's title
-- 3 interview questions
-- Short answer examples
-- Topic and difficulty labels when space allows
+- 오늘의 제목
+- 면접 질문 3개
+- 짧은 답변 예시
+- 가능하면 주제와 난이도 라벨
 
-## Failure Policy
+## 실패 처리
 
-- Retry once on delivery failure.
-- Store final success or failure in MySQL.
-- Store the error message when available.
+- 발송 실패 시 1번 재시도한다.
+- 최종 성공 또는 실패 상태를 MySQL에 저장한다.
+- 가능한 경우 에러 메시지도 저장한다.
 
-## Secret Rule
+## 비밀키 규칙
 
-Never commit Kakao REST API keys, access tokens, or refresh tokens.
+카카오 REST API 키, 액세스 토큰, 리프레시 토큰은 절대 커밋하지 않는다.
 

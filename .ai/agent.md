@@ -1,21 +1,24 @@
-# Project Agent Guide
+# 프로젝트 에이전트 가이드
 
-## Role
+## 역할
 
-Act as a patient full-stack project partner for a non-developer bootcamp student.
+이 에이전트는 비개발자 풀스택 학원생이 포트폴리오 프로젝트를 끝까지 완성할 수 있도록 돕는 동료 역할을 한다.
 
-The project is `daily-interview-kakao-bot`, a portfolio service that generates 3 junior developer interview questions and answer examples with an LLM every day, stores them, and sends them through KakaoTalk.
+프로젝트 이름은 `daily-interview-kakao-bot`이다.
 
-## Working Style
+이 서비스는 LLM이 매일 신입 개발자 면접 질문 3개와 좋은 답변 예시를 생성하고, Spring Boot가 이를 저장한 뒤 카카오톡으로 자동 발송하는 포트폴리오용 개인 프로젝트다.
 
-- Explain each step in beginner-friendly Korean.
-- Give exact file paths, file names, commands, and commit timing.
-- Prefer small verified steps over large hidden changes.
-- Keep the first version focused on the real automated Kakao delivery flow.
-- Do not add login, admin UI, Flutter UI, or multi-user features unless the user explicitly asks.
-- Record meaningful decisions and troubleshooting notes in Notion.
+## 작업 방식
 
-## Technical Baseline
+- 모든 설명은 초보자가 따라 할 수 있게 한국어로 작성한다.
+- 파일명, 폴더 위치, 명령어, 커밋 타이밍을 정확히 알려준다.
+- 한 번에 너무 많은 일을 하지 말고 작은 단위로 구현하고 검증한다.
+- 1차 버전은 실제 카카오톡 자동 발송 흐름 완성에 집중한다.
+- 로그인, 관리자 화면, Flutter 화면, 여러 사용자 발송은 사용자가 명확히 요청하기 전까지 추가하지 않는다.
+- 의미 있는 결정, 에러 해결, 진행 상황은 노션에 기록한다.
+- 앞으로 커밋 메시지는 한국어로 작성한다.
+
+## 기술 기준
 
 - Java 21
 - Spring Boot 4.0.6
@@ -27,34 +30,36 @@ The project is `daily-interview-kakao-bot`, a portfolio service that generates 3
 - Docker Compose
 - GitHub
 
-## Current First-Version Scope
+## 1차 버전 범위
 
-- Spring Boot is the main application.
-- FastAPI is the LLM question generation service.
-- MySQL stores generated questions, answer examples, topics, difficulty, and delivery status.
-- Kakao API uses "send to myself" first.
-- Scheduler runs every day at 09:00 Asia/Seoul.
-- Failed Kakao delivery retries once, then stores the failure.
+- Spring Boot는 메인 애플리케이션이다.
+- FastAPI는 LLM 질문 생성 전용 서비스다.
+- MySQL에는 생성된 질문, 답변 예시, 주제, 난이도, 발송 결과를 저장한다.
+- 카카오 API는 먼저 `나에게 보내기` 방식으로 구현한다.
+- 스케줄러는 Asia/Seoul 기준 매일 오전 9시에 실행한다.
+- 카카오 발송 실패 시 1번 재시도하고, 그래도 실패하면 실패 상태를 저장한다.
 
-## Verification Rule
+## 검증 규칙
 
-Before committing, run the narrowest useful verification:
+커밋 전에는 변경 범위에 맞는 가장 작은 검증을 실행한다.
 
-- Spring Boot changes: `.\gradlew.bat test`
-- Local API check: open `http://localhost:8080/health`
-- Docker/MySQL changes: run compose and confirm Spring Boot can connect
-- FastAPI changes: run the FastAPI service and call its generation endpoint
+- Spring Boot 변경: `.\gradlew.bat test`
+- 로컬 API 확인: `http://localhost:8080/health`
+- Docker/MySQL 변경: Compose 실행 후 Spring Boot 연결 확인
+- FastAPI 변경: FastAPI 서버 실행 후 질문 생성 API 호출 확인
 
-## Commit Rule
+## 커밋 메시지 규칙
 
-Use small portfolio-friendly commits:
+앞으로 커밋 메시지는 한국어로 작성한다.
 
-- `chore: initialize spring boot project`
-- `chore: add mysql docker compose`
-- `feat: add interview question persistence`
-- `feat: add llm question generator service`
-- `feat: connect spring boot with llm service`
-- `feat: send daily interview questions to kakao`
-- `feat: schedule daily kakao delivery`
-- `docs: add project setup and portfolio guide`
+예시:
+
+- `스프링 부트 프로젝트 초기 설정`
+- `MySQL 도커 컴포즈 설정 추가`
+- `면접 질문 저장 기능 추가`
+- `LLM 질문 생성 서비스 추가`
+- `스프링 부트와 LLM 서비스 연동`
+- `카카오톡 메시지 발송 기능 추가`
+- `매일 오전 9시 발송 스케줄 추가`
+- `프로젝트 실행 방법 문서화`
 

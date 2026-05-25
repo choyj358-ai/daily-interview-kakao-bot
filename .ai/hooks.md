@@ -1,29 +1,29 @@
-# Hook Ideas
+# Hook 아이디어
 
-These are future automation ideas, not active code yet.
+아래 내용은 아직 활성화된 코드가 아니라, 추후 자동화 후보이다.
 
-## Before Commit
+## 커밋 전
 
-Possible checks:
+나중에 자동으로 확인할 수 있는 항목:
 
-- Run `.\gradlew.bat test`
-- Check that no secret keys are committed
-- Check that `.env` files are ignored
+- `.\gradlew.bat test` 실행
+- 비밀키가 커밋에 포함되지 않았는지 확인
+- `.env` 파일이 Git에 올라가지 않는지 확인
 
-## After Daily Generation
+## 매일 질문 생성 후
 
-Possible checks:
+나중에 자동으로 확인할 수 있는 항목:
 
-- Log generated question count
-- Save delivery status
-- Send one retry if Kakao delivery fails
+- 생성된 질문 개수 기록
+- 카카오 발송 상태 저장
+- 발송 실패 시 1번 재시도
 
-## Before Deployment
+## 배포 전
 
-Possible checks:
+나중에 자동으로 확인할 수 있는 항목:
 
-- Confirm required environment variables exist
-- Confirm database connection
-- Confirm Kakao token validity
-- Confirm OpenAI model name is configured
+- 필요한 환경변수가 모두 있는지 확인
+- DB 연결 확인
+- 카카오 토큰 유효성 확인
+- OpenAI 모델명이 설정되어 있는지 확인
 
